@@ -6,27 +6,21 @@ import { useSelector } from "react-redux";
 const ContactList = () => {
   const contactList = useSelector((state) => state.contactList);
   const [inputValue, setInputValue] = useState("");
-  const [search, setSearch] = useState("");
 
   const filteredList = contactList.filter((item) => {
-    const keyword = search.toLowerCase();
+    const keyword = inputValue.toLowerCase();
 
     return (
       item.name.toLowerCase().includes(keyword) ||
-      item.phoneNumber.includes(search)
+      item.phoneNumber.includes()
     );
   });
-
-  const handleSearch = () => {
-    setSearch(inputValue);
-  };
 
   return (
     <div className="contact-list-wrap">
       <SearchBox
         inputValue={inputValue}
         setInputValue={setInputValue}
-        handleSearch={handleSearch}
       />
 
       <p className="section-title list-title">연락처 목록</p>
