@@ -127,6 +127,13 @@ body {
   margin-bottom: 24px;
 }
 
+.empty-contact {
+  padding: 24px 16px;
+  text-align: center;
+  color: #8a94a6;
+  font-size: 15px;
+}
+
 .contact-item {
   display: flex;
   justify-content: space-between;
