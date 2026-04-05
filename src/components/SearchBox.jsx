@@ -6,7 +6,7 @@ const SearchBox = ({ inputValue, setInputValue, handleSearch }) => {
     <div className="search-box-wrap">
       <Form.Control
         type="text"
-        placeholder="검색"
+        placeholder="전화번호 또는 이름을 검색하세요."
         className="search-box-input"
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
