@@ -53,7 +53,7 @@ const ContactForm = () => {
 
       <Form onSubmit={addContact}>
         <div className="contact-form-card">
-          <p className="section-title">추가</p>
+          <p className="section-title">연락처 추가</p>
 
           <div className="form-row-box">
             <label className="form-label">이름</label>
