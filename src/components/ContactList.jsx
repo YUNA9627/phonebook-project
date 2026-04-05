@@ -8,11 +8,13 @@ const ContactList = () => {
   const [inputValue, setInputValue] = useState("");
 
   const filteredList = contactList.filter((item) => {
-    const keyword = inputValue.toLowerCase();
+    const keyword = inputValue.toLowerCase().trim();
+    const phoneKeyword = inputValue.replace(/-/g, "").trim();
+    const itemPhone = item.phoneNumber.replace(/-/g, "");
 
     return (
       item.name.toLowerCase().includes(keyword) ||
-      item.phoneNumber.includes()
+      itemPhone.includes(phoneKeyword)
     );
   });
 
@@ -26,9 +28,13 @@ const ContactList = () => {
       <p className="section-title list-title">연락처 목록</p>
 
       <div className="contact-items-card">
-        {filteredList.map((item, index) => (
-          <ContactItem key={index} item={item} index={index} />
-        ))}
+        {filteredList.length > 0 ? (
+          filteredList.map((item, index) => (
+            <ContactItem key={index} item={item} index={index} />
+          ))
+        ) : (
+          <div className="empty-contact">검색 결과가 없습니다.</div>
+        )}
       </div>
     </div>
   );
