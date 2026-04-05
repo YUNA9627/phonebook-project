@@ -12,14 +12,10 @@ function App() {
   return (
     <>
       <Container>
-        <Row>
-          <Col>
-            <ContactForm />
-          </Col>
-          <Col>
-            <ContactList />
-          </Col>
-        </Row>
+        <div className="contact-card">
+          <ContactForm />
+          <ContactList />
+        </div>
       </Container>
     </>
   );
