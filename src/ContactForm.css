@@ -44,6 +44,10 @@ body {
   box-shadow: none !important;
 }
 
+.search-box-input::placeholder {
+  color: #b0b7c3;
+}
+
 .contact-form-card {
   background: #ffffff;
   border-radius: 16px;
